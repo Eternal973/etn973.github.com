@@ -11,6 +11,7 @@
 </head>
 <body>
 <iframe
+	id="iframe"
 	src="https://eternal973-mybing.hf.space"
 	height="100%"
 	width="100%"
@@ -19,4 +20,13 @@
 	onload="changeFrameHeight()"
 	frameborder="0"
 ></iframe>
+<script>
+    function changeFrameHeight() {
+        var iframe = document.getElementById("iframe");
+        iframe.height = document.documentElement.clientHeight;
+    }
+    window.onresize = function() {
+        changeFrameHeight();
+    }
+</script>
 </body>
